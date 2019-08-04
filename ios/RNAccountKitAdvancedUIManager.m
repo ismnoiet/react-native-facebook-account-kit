@@ -20,4 +20,15 @@
     return self;
 }
 
+// hide back button
+- (UIView *)actionBarViewForState:(AKFLoginFlowState)state
+{
+    if (state == 1) {
+        // state is AKFLoginFlowStatePhoneNumberInput
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 100)];
+        return view;
+    }
+    return nil;
+}
+
 @end
